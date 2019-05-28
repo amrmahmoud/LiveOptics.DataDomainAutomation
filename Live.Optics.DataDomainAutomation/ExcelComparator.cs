@@ -38,7 +38,7 @@ namespace LiveOptics.DataDomainAutomation
                         //result.ResponseText = responseText;
                         //return result;
                     }
-                    Console.WriteLine( "Sheets Quantity Match..." );
+                    else Console.WriteLine( "Sheets Quantity Match..." );
 
                     //If above passes, lets go sheet by sheet and compare name and usage metrics
                     foreach ( IXLWorksheet sheet in actualClosedExcel.Worksheets )
@@ -63,7 +63,7 @@ namespace LiveOptics.DataDomainAutomation
 
                             //return result;
                         }
-                        Console.WriteLine( "Sheet Names Match..." );
+                        else Console.WriteLine( "Sheet Names Match..." );
 
                         //Column usage check
                         int usedColumnCountInActual = sheet.ColumnsUsed().Count();
@@ -79,7 +79,7 @@ namespace LiveOptics.DataDomainAutomation
 
                             //return result;
                         }
-                        Console.WriteLine( "Used Column Quantity Match..." );
+                        else Console.WriteLine( "Used Column Quantity Match..." );
 
                         //Heading Values check
                         int currentColIndex = 1;
@@ -119,7 +119,7 @@ namespace LiveOptics.DataDomainAutomation
 
                                 //return result;
                             }
-                            Console.WriteLine( "Used Row Quantity Match..." );
+                            else Console.WriteLine( "Used Row Quantity Match..." );
 
                             //Cell usage check
                             int usedCellCountInActual = sheet.CellsUsed().Count();
@@ -135,7 +135,7 @@ namespace LiveOptics.DataDomainAutomation
 
                                 //return result;
                             }
-                            Console.WriteLine( "Used Cell Quantity Match..." );
+                            else Console.WriteLine( "Used Cell Quantity Match..." );
 
                             //After basic value checks pass, lets go a level deeper and compare cell content for each populated cell.
                             foreach ( IXLCell cell in sheet.CellsUsed() )
