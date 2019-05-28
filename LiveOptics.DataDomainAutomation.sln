@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveOptics.DataDomainAutomation", "ConsoleApp1\LiveOptics.DataDomainAutomation.csproj", "{94E00002-3995-4909-93AA-D8F0BDFF021C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Live.Optics.DataDomainAutomation.Tests", "Live.Optics.DataDomainAutomationTests\Live.Optics.DataDomainAutomation.Tests.csproj", "{191A7CD2-8E0F-42D8-A304-52CB17ABED98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Live.Optics.DataDomainAutomation.Tests", "Live.Optics.DataDomainAutomation\Live.Optics.DataDomainAutomation.Tests.csproj", "{CBE316DA-DDA3-4385-B780-29407765C005}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiveOptics.DataDomainAutomation", "Live.Optics.DataDomainAutomation\LiveOptics.DataDomainAutomation.csproj", "{94E00002-3995-4909-93AA-D8F0BDFF021C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{191A7CD2-8E0F-42D8-A304-52CB17ABED98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{191A7CD2-8E0F-42D8-A304-52CB17ABED98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{191A7CD2-8E0F-42D8-A304-52CB17ABED98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{191A7CD2-8E0F-42D8-A304-52CB17ABED98}.Release|Any CPU.Build.0 = Release|Any CPU
 		{94E00002-3995-4909-93AA-D8F0BDFF021C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{94E00002-3995-4909-93AA-D8F0BDFF021C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{94E00002-3995-4909-93AA-D8F0BDFF021C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{94E00002-3995-4909-93AA-D8F0BDFF021C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CBE316DA-DDA3-4385-B780-29407765C005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CBE316DA-DDA3-4385-B780-29407765C005}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CBE316DA-DDA3-4385-B780-29407765C005}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CBE316DA-DDA3-4385-B780-29407765C005}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

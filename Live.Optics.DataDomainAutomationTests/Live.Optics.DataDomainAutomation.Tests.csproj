@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConsoleApp1\LiveOptics.DataDomainAutomation.csproj" />
+    <ProjectReference Include="..\Live.Optics.DataDomainAutomation\LiveOptics.DataDomainAutomation.csproj" />
   </ItemGroup>
 
 </Project>
