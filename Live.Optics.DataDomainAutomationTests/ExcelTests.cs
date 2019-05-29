@@ -14,12 +14,14 @@ namespace LiveOptics.DataDomainAutomation
     public class ExcelTests
     {
         private readonly ExcelComparator _excelCompare = new ExcelComparator();
+        string location;
 
         [OneTimeSetUp]
         public void TestInitialize()
         {
-            var pathToExecutable = "cd C:\\Users\\mosaaa\\Downloads\\DDLS-latest";
-            var executableCommand = "DDLS.exe -inputFolder \"C:\\Users\\mosaaa\\Downloads\\Data Domain\\ASUP Files\\ASUPS\" -outputFolder \"C:\\Users\\mosaaa\\Downloads\\Data Domain\\ASUP Files\\ASUPS\"";
+            location = Environment.CurrentDirectory;
+            var pathToExecutable = "cd " + location + "\\..\\..\\..\\Executable";
+            var executableCommand = "DDLS.exe -inputFolder \"..\\ASUPS\" -outputFolder \"..\\ASUPS\"";
             //Running cmd and passing arguments
             Process cmd = new Process();
             cmd.StartInfo.FileName = "cmd.exe";
@@ -39,16 +41,15 @@ namespace LiveOptics.DataDomainAutomation
         [Test]
         public void VerifyXlsxDDConfigInfo()
         {
-            DirectoryInfo hdDirectoryInWhichToSearch = new DirectoryInfo(@"C:\Users\mosaaa\Downloads\Data Domain\ASUP Files\ASUPS");
+            DirectoryInfo hdDirectoryInWhichToSearch = new DirectoryInfo(@"..\..\..\ASUPS");
             FileSystemInfo[] filesAndDirs = hdDirectoryInWhichToSearch.GetFiles("*" + "Config" + "*", SearchOption.AllDirectories);
-
             foreach (FileSystemInfo foundFile in filesAndDirs)
             {
                 string fullName = foundFile.FullName;
                 Console.WriteLine(fullName);
 
                 string actualExcel = fullName;
-                string expectedExcel = "C:\\Users\\mosaaa\\Downloads\\Data Domain\\Template of four XLXS\\Data Domain Config.xlsx";
+                string expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain Config.xlsx";
 
                 //compare files
                 ComparisonResponseModel fileequalitycheck = _excelCompare.AreEqual(expectedExcel, actualExcel);
@@ -59,7 +60,7 @@ namespace LiveOptics.DataDomainAutomation
         [Test]
         public void VerifyXlsxDDHistory()
         {
-            DirectoryInfo hdDirectoryInWhichToSearch = new DirectoryInfo(@"C:\Users\mosaaa\Downloads\Data Domain\ASUP Files\ASUPS");
+            DirectoryInfo hdDirectoryInWhichToSearch = new DirectoryInfo(@"..\..\..\ASUPS");
             FileSystemInfo[] filesAndDirs = hdDirectoryInWhichToSearch.GetFiles("*" + "History" + "*", SearchOption.AllDirectories);
 
             foreach (FileSystemInfo foundFile in filesAndDirs)
@@ -68,7 +69,7 @@ namespace LiveOptics.DataDomainAutomation
                 Console.WriteLine(fullName);
 
                 string actualExcel = fullName;
-                var expectedExcel = "C:\\Users\\mosaaa\\Downloads\\Data Domain\\Template of four XLXS\\Data Domain History.xlsx";
+                var expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain History.xlsx";
 
                 //compare files
                 ComparisonResponseModel fileequalitycheck = _excelCompare.AreEqual(expectedExcel, actualExcel);
@@ -79,7 +80,7 @@ namespace LiveOptics.DataDomainAutomation
         [Test]
         public void VerifyXlsxDDReplicationMapping()
         {
-            DirectoryInfo hdDirectoryInWhichToSearch = new DirectoryInfo(@"C:\Users\mosaaa\Downloads\Data Domain\ASUP Files\ASUPS");
+            DirectoryInfo hdDirectoryInWhichToSearch = new DirectoryInfo(@"..\..\..\ASUPS");
             FileSystemInfo[] filesAndDirs = hdDirectoryInWhichToSearch.GetFiles("*" + "Replication" + "*", SearchOption.AllDirectories);
 
             foreach (FileSystemInfo foundFile in filesAndDirs)
@@ -88,7 +89,7 @@ namespace LiveOptics.DataDomainAutomation
                 Console.WriteLine(fullName);
 
                 string actualExcel = fullName;
-                var expectedExcel = "C:\\Users\\mosaaa\\Downloads\\Data Domain\\Template of four XLXS\\Data Domain Replication Map.xlsx";
+                var expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain Replication Map.xlsx";
 
                 //compare files
                 ComparisonResponseModel fileequalitycheck = _excelCompare.AreEqual(expectedExcel, actualExcel);
@@ -99,7 +100,7 @@ namespace LiveOptics.DataDomainAutomation
         [Test]
         public void VerifyXlsxDDBoostInfo()
         {
-            DirectoryInfo hdDirectoryInWhichToSearch = new DirectoryInfo(@"C:\Users\mosaaa\Downloads\Data Domain\ASUP Files\ASUPS");
+            DirectoryInfo hdDirectoryInWhichToSearch = new DirectoryInfo(@"..\..\..\ASUPS");
             FileSystemInfo[] filesAndDirs = hdDirectoryInWhichToSearch.GetFiles("*" + "BOOST Information" + "*", SearchOption.AllDirectories);
 
             foreach (FileSystemInfo foundFile in filesAndDirs)
@@ -108,7 +109,7 @@ namespace LiveOptics.DataDomainAutomation
                 Console.WriteLine(fullName);
 
                 string actualExcel = fullName;
-                var expectedExcel = "C:\\Users\\mosaaa\\Downloads\\Data Domain\\Template of four XLXS\\Data Domain BOOST Information.xlsx";
+                var expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain BOOST Information.xlsx";
 
                 //compare files
                 ComparisonResponseModel fileequalitycheck = _excelCompare.AreEqual(expectedExcel, actualExcel);
