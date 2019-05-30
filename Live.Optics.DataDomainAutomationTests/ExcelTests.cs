@@ -47,9 +47,11 @@ namespace LiveOptics.DataDomainAutomation
             {
                 string fullName = foundFile.FullName;
                 Console.WriteLine(fullName);
+                string asupSerial = fullName.Split('-')[1];
+                Console.WriteLine(asupSerial);
 
                 string actualExcel = fullName;
-                string expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain Config.xlsx";
+                string expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain Config" +asupSerial+".xlsx";
 
                 //compare files
                 ComparisonResponseModel fileequalitycheck = _excelCompare.AreEqual(expectedExcel, actualExcel);
@@ -67,9 +69,11 @@ namespace LiveOptics.DataDomainAutomation
             {
                 string fullName = foundFile.FullName;
                 Console.WriteLine(fullName);
+                string asupSerial = fullName.Split('-')[1];
+                Console.WriteLine(asupSerial);
 
                 string actualExcel = fullName;
-                var expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain History.xlsx";
+                var expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain History" + asupSerial + ".xlsx";
 
                 //compare files
                 ComparisonResponseModel fileequalitycheck = _excelCompare.AreEqual(expectedExcel, actualExcel);
@@ -87,9 +91,11 @@ namespace LiveOptics.DataDomainAutomation
             {
                 string fullName = foundFile.FullName;
                 Console.WriteLine(fullName);
+                string asupSerial = fullName.Split('-')[1];
+                Console.WriteLine(asupSerial);
 
                 string actualExcel = fullName;
-                var expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain Replication Map.xlsx";
+                var expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain Replication Mapping.xlsx";
 
                 //compare files
                 ComparisonResponseModel fileequalitycheck = _excelCompare.AreEqual(expectedExcel, actualExcel);
@@ -107,9 +113,11 @@ namespace LiveOptics.DataDomainAutomation
             {
                 string fullName = foundFile.FullName;
                 Console.WriteLine(fullName);
+                string asupSerial = fullName.Split('-')[1];
+                Console.WriteLine(asupSerial);
 
                 string actualExcel = fullName;
-                var expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain BOOST Information.xlsx";
+                var expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain BOOST Information" + asupSerial + ".xlsx";
 
                 //compare files
                 ComparisonResponseModel fileequalitycheck = _excelCompare.AreEqual(expectedExcel, actualExcel);
