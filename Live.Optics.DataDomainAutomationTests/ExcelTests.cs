@@ -30,7 +30,7 @@ namespace LiveOptics.DataDomainAutomation
             cmd.StartInfo.CreateNoWindow = true;
             cmd.StartInfo.UseShellExecute = false;
             cmd.Start();
-            //Sending command to run .exe on asup file to generate xlxs
+            //Sending command to run .exe on asup files to generate xlxs
             cmd.StandardInput.WriteLine(pathToExecutable);
             cmd.StandardInput.WriteLine(executableCommand);
             cmd.StandardInput.Flush();

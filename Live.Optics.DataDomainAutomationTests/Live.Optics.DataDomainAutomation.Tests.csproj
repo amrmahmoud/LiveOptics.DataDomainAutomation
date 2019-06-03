@@ -17,4 +17,10 @@
     <ProjectReference Include="..\Live.Optics.DataDomainAutomation\LiveOptics.DataDomainAutomation.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Executable\DDLS.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
