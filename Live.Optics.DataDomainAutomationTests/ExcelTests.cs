@@ -47,11 +47,11 @@ namespace LiveOptics.DataDomainAutomation
             {
                 string fullName = foundFile.FullName;
                 Console.WriteLine(fullName);
-                string asupSerial = fullName.Split('-')[1];
-                Console.WriteLine(asupSerial);
+                string parentDirectoryName = Path.GetFileName(Path.GetDirectoryName(fullName));
+                Console.WriteLine(parentDirectoryName);
 
                 string actualExcel = fullName;
-                string expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain Config" +asupSerial+".xlsx";
+                string expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain Config " +parentDirectoryName+".xlsx";
 
                 //compare files
                 ComparisonResponseModel fileequalitycheck = _excelCompare.AreEqual(expectedExcel, actualExcel);
@@ -69,11 +69,11 @@ namespace LiveOptics.DataDomainAutomation
             {
                 string fullName = foundFile.FullName;
                 Console.WriteLine(fullName);
-                string asupSerial = fullName.Split('-')[1];
-                Console.WriteLine(asupSerial);
+                string parentDirectoryName = Path.GetFileName(Path.GetDirectoryName(fullName));
+                Console.WriteLine(parentDirectoryName);
 
                 string actualExcel = fullName;
-                var expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain History" + asupSerial + ".xlsx";
+                var expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain History " +parentDirectoryName+ ".xlsx";
 
                 //compare files
                 ComparisonResponseModel fileequalitycheck = _excelCompare.AreEqual(expectedExcel, actualExcel);
@@ -91,11 +91,11 @@ namespace LiveOptics.DataDomainAutomation
             {
                 string fullName = foundFile.FullName;
                 Console.WriteLine(fullName);
-                string asupSerial = fullName.Split('-')[1];
-                Console.WriteLine(asupSerial);
+                string parentDirectoryName = Path.GetFileName(Path.GetDirectoryName(fullName));
+                Console.WriteLine(parentDirectoryName);
 
                 string actualExcel = fullName;
-                var expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain Replication Mapping.xlsx";
+                var expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain Replication Mapping " +parentDirectoryName+ ".xlsx";
 
                 //compare files
                 ComparisonResponseModel fileequalitycheck = _excelCompare.AreEqual(expectedExcel, actualExcel);
@@ -113,11 +113,11 @@ namespace LiveOptics.DataDomainAutomation
             {
                 string fullName = foundFile.FullName;
                 Console.WriteLine(fullName);
-                string asupSerial = fullName.Split('-')[1];
-                Console.WriteLine(asupSerial);
+                string parentDirectoryName = Path.GetFileName(Path.GetDirectoryName(fullName));
+                Console.WriteLine(parentDirectoryName);
 
                 string actualExcel = fullName;
-                var expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain BOOST Information" + asupSerial + ".xlsx";
+                var expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain BOOST Information " +parentDirectoryName+ ".xlsx";
 
                 //compare files
                 ComparisonResponseModel fileequalitycheck = _excelCompare.AreEqual(expectedExcel, actualExcel);
