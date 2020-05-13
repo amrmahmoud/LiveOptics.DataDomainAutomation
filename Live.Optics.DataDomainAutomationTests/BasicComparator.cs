@@ -10,22 +10,20 @@ namespace Live.Optics.DataDomainAutomation.Tests
     [TestFixture]
     public class BasicComparator
     {
-        private readonly ExcelComparator _excelCompare = new ExcelComparator();
+        private readonly ExcelComparator1 _excelCompare = new ExcelComparator1();
 
         [Test]
         public void VerifyXlsx2DDVtV()
         {
-            DirectoryInfo hdDirectoryInWhichToSearch = new DirectoryInfo(@"..\..\..\ASUPS");
-            FileSystemInfo[] filesAndDirs = hdDirectoryInWhichToSearch.GetFiles("*" + "VtV" + "*", SearchOption.AllDirectories);
+            DirectoryInfo hdDirectoryInWhichToSearch = new DirectoryInfo(@"..\..\..\ActualExcel");
+            FileSystemInfo[] filesAndDirs = hdDirectoryInWhichToSearch.GetFiles("*" + ".xlsx" + "*", SearchOption.AllDirectories);
             foreach (FileSystemInfo foundFile in filesAndDirs)
             {
                 string fullName = foundFile.FullName;
-                Console.WriteLine(fullName);
-                string parentDirectoryName = Path.GetFileName(Path.GetDirectoryName(fullName));
-                Console.WriteLine(parentDirectoryName);
+                string filename = Path.GetFileName(fullName);
 
                 string actualExcel = fullName;
-                string expectedExcel = "..\\..\\..\\XLSX Templates\\Data Domain VtV " + parentDirectoryName + ".xlsx";
+                string expectedExcel = $"..\\..\\..\\ExpectedExcel\\{filename}";
 
                 //compare files
                 ComparisonResponseModel fileequalitycheck = _excelCompare.AreEqual(expectedExcel, actualExcel);

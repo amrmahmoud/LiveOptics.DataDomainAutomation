@@ -74,6 +74,7 @@
   <ItemGroup>
     <Compile Include="ComparisonResponseModel.cs" />
     <Compile Include="ExcelComparator.cs" />
+    <Compile Include="ExcelComparator1.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -18,9 +18,25 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="ASUPS\AVAMAR_NEW.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="ASUPS\DataDomain - Expected.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Executable\DDLS.exe">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="XLSX Templates\AVAMAR_OLD.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="XLSX Templates\DataDomain - Actual.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ExpectedExcel\" />
   </ItemGroup>
 
 </Project>
